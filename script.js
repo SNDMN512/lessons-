@@ -1,15 +1,23 @@
 "use strict";
 
-let lang = prompt("Введите ru или en");
+const str1 = 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh';
+const str2 = 'hhhhhhhhhhhhhhhhhhhhh';
+const str3 = '           hhhhhhhhhhhhhhhhhhhhh             ';
+const str4 = '                hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh               ';
 
-const weeks = [['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-              ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']];
+const stringConversion = function (str) {
+    str = str.trim()
+    if (typeof str === 'string') {
+        if (str.length > 30) {
+            return str.slice(0,31) + '...'
+        } else {
+            return str
+        }
+    } return "Введите строку!"
+}
 
-
-let week = lang == "ru" ? weeks[0].toString() : lang == "en" ? weeks[1].toString() : "Введите ru или en";
-console.log(week);
-
-
-let namePerson = prompt("Введите имя", "Студент");
-namePerson == "Артем" ? console.log("Директор") : namePerson == "Александр" ? console.log("Преподаватель") : console.log("Студент");
+console.log(stringConversion(str1))
+console.log(stringConversion(str2))
+console.log(stringConversion(str3))
+console.log(stringConversion(str4))
 
