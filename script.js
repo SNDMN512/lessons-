@@ -12,6 +12,4 @@ console.log(week);
 
 let namePerson = prompt("Введите имя", "Студент");
 namePerson == "Артем" ? console.log("Директор") : namePerson == "Александр" ? console.log("Преподаватель") : console.log("Студент");
-;
-;
 
