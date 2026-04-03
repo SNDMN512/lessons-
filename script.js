@@ -1,15 +1,17 @@
-let num; let total; let strNum; let totalPow;
-num = 266219;
-strNum = num.toString();
-total = 1;
+"use strict";
 
-for (let i = 0; i < strNum.length; i++) {
-    total*=Number(strNum[i])
-}
-console.log(total);
+let lang = prompt("Введите ru или en");
 
-totalPow = total ** 3
-console.log(totalPow);
+const weeks = [['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+              ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']];
 
-console.log(Number(totalPow.toString().slice(0,2)));
+
+let week = lang == "ru" ? weeks[0].toString() : lang == "en" ? weeks[1].toString() : "Введите ru или en";
+console.log(week);
+
+
+let namePerson = prompt("Введите имя", "Студент");
+namePerson == "Артем" ? console.log("Директор") : namePerson == "Александр" ? console.log("Преподаватель") : console.log("Студент");
+;
+;
 
