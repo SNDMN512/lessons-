@@ -6,8 +6,8 @@ const str3 = '           hhhhhhhhhhhhhhhhhhhhh             ';
 const str4 = '                hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh               ';
 
 const stringConversion = function (str) {
-    str = str.trim()
     if (typeof str === 'string') {
+        str = str.trim()
         if (str.length > 30) {
             return str.slice(0,31) + '...'
         } else {
@@ -20,4 +20,4 @@ console.log(stringConversion(str1))
 console.log(stringConversion(str2))
 console.log(stringConversion(str3))
 console.log(stringConversion(str4))
-
+console.log(stringConversion(123))
