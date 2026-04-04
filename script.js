@@ -1,23 +1,23 @@
 "use strict";
+// Task 1
 
-const str1 = 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh';
-const str2 = 'hhhhhhhhhhhhhhhhhhhhh';
-const str3 = '           hhhhhhhhhhhhhhhhhhhhh             ';
-const str4 = '                hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh               ';
+let arr = ['15468879', '24564654658', '7897856644656', '26464646468646645', '646448464648165', '4561321561161651135', '687996464556'];
 
-const stringConversion = function (str) {
-    if (typeof str === 'string') {
-        str = str.trim()
-        if (str.length > 30) {
-            return str.slice(0,31) + '...'
-        } else {
-            return str
-        }
-    } return "Введите строку!"
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i][0] === '2' || arr[i][0] === '4') {
+        console.log(arr[i])
+    }
 }
 
-console.log(stringConversion(str1))
-console.log(stringConversion(str2))
-console.log(stringConversion(str3))
-console.log(stringConversion(str4))
-console.log(stringConversion(123))
+// Task 2
+let num = 2
+nextPrime:
+for (let i = 2; i < 101; i++) {
+    for (let j = 2; j < i; j++) {
+        if (i % j === 0) {
+        continue nextPrime
+        }
+    }
+    console.log(i)
+    
+}
