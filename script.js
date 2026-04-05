@@ -1,15 +1,14 @@
-let num; let total; let strNum; let totalPow;
-num = 266219;
-strNum = num.toString();
-total = 1;
+let num = 266219
+//const arr = String(num).split("").map(Number)
+const arr = Array.from(String(num), Number)
 
-for (let i = 0; i < strNum.length; i++) {
-    total*=Number(strNum[i])
-}
-console.log(total);
+multiplyNum = arr.reduce((n1, n2) => n1 * n2)
+totalPow = multiplyNum ** 3
 
-totalPow = total ** 3
 console.log(totalPow);
 
-console.log(Number(totalPow.toString().slice(0,2)));
+
+
+
+
 
