@@ -1,23 +1,32 @@
 "use strict";
 
-const str1 = 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh';
-const str2 = 'hhhhhhhhhhhhhhhhhhhhh';
-const str3 = '           hhhhhhhhhhhhhhhhhhhhh             ';
-const str4 = '                hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh               ';
+// Task1
 
-const stringConversion = function (str) {
-    if (typeof str === 'string') {
-        str = str.trim()
-        if (str.length > 30) {
-            return str.slice(0,31) + '...'
+let arr = ['2456465464654', '7979651616', '8989846564', '451231851', '131315135', '26546486', '45666664833'];
+const arrNum = arr.filter((num) => num[0] == '2' || num[0] == '4')
+
+console.log(arrNum);
+
+// Task2
+
+for (let i = 2; i < 101; i++) {
+    if (i == 2) {
+        console.log(i, 'Делители:', 1, 'и', i)
+    }
+    else if (i < 9) {
+        if (i % 2 == 0) {
+            continue
         } else {
-            return str
+            console.log(i, 'Делители:', 1, 'и', i) 
         }
-    } return "Введите строку!"
-}
-
-console.log(stringConversion(str1))
-console.log(stringConversion(str2))
-console.log(stringConversion(str3))
-console.log(stringConversion(str4))
-console.log(stringConversion(123))
+    } else if (i == 9) {
+        continue
+    } else {
+        if ((i % 2 == 0 || i % 3 == 0 || i % 4 == 0 || i % 5 == 0 || i % 6 == 0 
+            || i % 7 == 0 || i % 8 == 0 || i % 9 == 0) && (i % i == 0 && i % 1 == 0)) {
+            continue
+        } else {
+            console.log(i, 'Делители:', 1, 'и', i)
+        }
+    }  
+}        
