@@ -1,15 +1,25 @@
-let num; let total; let strNum; let totalPow;
-num = 266219;
-strNum = num.toString();
-total = 1;
+"use strict";
 
-for (let i = 0; i < strNum.length; i++) {
-    total*=Number(strNum[i])
+const week = [
+    'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'
+]
+
+let curentDayIndex = new Date().getDay();
+
+let resultHtml = '';
+
+for (let i = 0; i < week.length; i++) {
+    let dayText = week[i];
+
+    if (i === 5 || i === 6) {
+        dayText = "<i>" + dayText + "</i>";
+    };
+    if (i === curentDayIndex - 1) {
+        dayText = "<b>" + dayText + "</b>";
+    }
+    resultHtml += dayText + "<br/>";
 }
-console.log(total);
 
-totalPow = total ** 3
-console.log(totalPow);
+document.querySelector(".days").innerHTML = resultHtml;
 
-console.log(Number(totalPow.toString().slice(0,2)));
 
